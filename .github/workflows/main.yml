@@ -19,11 +19,10 @@ jobs:
       uses: gradle/gradle-build-action@v3
       with:
         gradle-version: 9.1.0
-        build-root-directory: Ice-Pure-Fabric
         arguments: clean build -x test
     - name: Upload JAR
       uses: actions/upload-artifact@v4
       with:
         name: Ice-JAR
-        path: Ice-Pure-Fabric/build/libs/*.jar
+        path: build/libs/*.jar
  
